@@ -1,0 +1,161 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: cornflowerblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1000px;
+    width: 100vw;
+    margin-top: 20px;
+    padding-inline: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.input>input {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 10px;
+    font-size: large;
+    border: none;
+    height: 100%;
+}
+
+.input>button {
+    height: 100%;
+    padding: 11.3px 15px;
+    border: none;
+    font-size: medium;
+    background-color: coral;
+    color: inherit;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+}
+
+.left,
+.mid,
+.right {
+    height: 500px;
+    width: 280px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.translate-left {
+    transform: translateX(-50px) scaleY(.9);
+}
+
+.translate-right {
+    transform: translateX(51px) scaleY(.9);
+}
+
+#img {
+    display: flex;
+    z-index: 5;
+}
+
+#img img {
+    width: 100%;
+}
+
+#ability {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 3;
+}
+
+#ability h1, p {
+    z-index: 99;
+    color: black;
+}
+
+#ability p {
+    text-align: left;
+    line-height: 1.5rem;
+}
+
+#stat {
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+}
+
+#stat div {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 20px;
+}
+
+#stat h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#stat h1, p, span {
+    color: black;
+    margin-bottom: 20px;
+}
+
+#stat span:nth-of-type(1) {
+    font-size: larger;
+}
+
+#ability, #img, #stat {
+    transition: .5s;
+}
+
+#ability:hover, #img:hover, #stat:hover {
+    z-index: 5 !important;
+}
+
+#ability:hover {
+    transform: translateX(10px) scaleY(1) !important;
+}
+
+#stat:hover {
+    transform: translateX(-10px) scaleY(1) !important;
+}
+
+.scale {
+    transform: scaleY(1) !important;
+}
+
+.shrink {
+    transform: scaleY(0.9) !important;
+}
+
+.left-shift {
+    transform: translateX(-10px) scaleY(1) !important;
+}
+
+.right-shift {
+    transform: translateX(10px) scaleY(1) !important;
+}
